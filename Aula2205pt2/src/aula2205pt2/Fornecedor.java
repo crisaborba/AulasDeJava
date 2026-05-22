@@ -38,6 +38,7 @@ public class Fornecedor extends javax.swing.JFrame {
         nome_vendedor = new javax.swing.JTextField();
         vender = new javax.swing.JButton();
         limpar = new javax.swing.JButton();
+        Produtos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Janela do Fornecedor\n");
@@ -67,6 +68,13 @@ public class Fornecedor extends javax.swing.JFrame {
             }
         });
 
+        Produtos.setText("Produtos");
+        Produtos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProdutosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -74,7 +82,7 @@ public class Fornecedor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(38, Short.MAX_VALUE)
+                        .addContainerGap(27, Short.MAX_VALUE)
                         .addComponent(jLabel5)
                         .addGap(37, 37, 37))
                     .addGroup(layout.createSequentialGroup()
@@ -86,18 +94,23 @@ public class Fornecedor extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(vender))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(limpar))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(empresa)
-                        .addComponent(email)
-                        .addComponent(endereco)
-                        .addComponent(cnpj)
-                        .addComponent(nome_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(empresa)
+                            .addComponent(email)
+                            .addComponent(endereco)
+                            .addComponent(cnpj)
+                            .addComponent(nome_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(limpar)))
                 .addGap(67, 67, 67))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(162, 162, 162)
+                .addComponent(Produtos)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,7 +139,9 @@ public class Fornecedor extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vender)
                     .addComponent(limpar))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Produtos)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
@@ -150,6 +165,12 @@ public class Fornecedor extends javax.swing.JFrame {
         cnpj.setText("");
         nome_vendedor.setText("");
     }//GEN-LAST:event_limparMouseClicked
+
+    private void ProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProdutosActionPerformed
+        // TODO add your handling code here:
+        Produtos produtos = new Produtos();
+        produtos.setVisible(true);        
+    }//GEN-LAST:event_ProdutosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,6 +208,7 @@ public class Fornecedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Produtos;
     private javax.swing.JTextField cnpj;
     private javax.swing.JTextField email;
     private javax.swing.JTextField empresa;
