@@ -54,6 +54,12 @@ public class Fornecedor extends javax.swing.JFrame {
 
         jLabel5.setText("Nome do Vendedor");
 
+        empresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                empresaActionPerformed(evt);
+            }
+        });
+
         vender.setText("Vender");
         vender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,17 +98,14 @@ public class Fornecedor extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addComponent(jLabel4)
-                            .addComponent(vender))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(vender))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(empresa)
-                            .addComponent(email)
-                            .addComponent(endereco)
-                            .addComponent(cnpj)
-                            .addComponent(nome_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(empresa)
+                        .addComponent(email)
+                        .addComponent(endereco)
+                        .addComponent(cnpj)
+                        .addComponent(nome_vendedor, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(93, 93, 93)
                         .addComponent(limpar)))
@@ -171,6 +174,10 @@ public class Fornecedor extends javax.swing.JFrame {
         Produtos produtos = new Produtos();
         produtos.setVisible(true);        
     }//GEN-LAST:event_ProdutosActionPerformed
+
+    private void empresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empresaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_empresaActionPerformed
 
     /**
      * @param args the command line arguments
